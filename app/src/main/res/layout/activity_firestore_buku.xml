@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparan"
+    android:padding="20dp"
+    tools:context=".FirestoreActivityBuku">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:onClick="logoutProcess"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="#CD5C5C"/>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATA BUKU"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A293E"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/judulbuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Judul"/>
+    <EditText
+        android:id="@+id/penulis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulbuku"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Penulis"/>
+
+    <EditText
+        android:id="@+id/penerbit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/penulis"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Penerbit"/>
+
+    <EditText
+        android:id="@+id/stok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/penerbit"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Stok"/>
+
+    <LinearLayout
+        android:id="@+id/action"
+        android:layout_below="@id/stok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="AddBuku"
+        android:layout_marginRight="20dp"
+        android:background="#1A293E"
+        android:textColor="#ffffff"/>
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:onClick="UpdateBuku"
+        android:layout_marginRight="20dp"
+        android:background="#1A293E"
+        android:textColor="#ffffff"/>
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:onClick="DeleteBuku"
+        android:background="#1A293E"
+        android:textColor="#ffffff"/>
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/buku_list"
+        android:layout_below="@id/action"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="2dp"
+        android:padding="2dp"/>
+
+</RelativeLayout>

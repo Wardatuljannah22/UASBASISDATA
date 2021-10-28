@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundlib"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/ub"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/ub1"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_below="@+id/ub"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/library1"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/login"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="LOG IN"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1A293E"
+            android:background="#ffffff"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_below="@+id/login"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            style="@style/btnStyleWhite"
+            android:background="@android:color/transparent"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+</RelativeLayout>

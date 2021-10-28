@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparan"
+    android:padding="20dp"
+    tools:context=".RealtimeActivityMahasiswa">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:onClick="logoutProcess"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="#CD5C5C"/>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATA MAHASISWA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A293E"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/nim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="NIM"/>
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nim"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Nama"/>
+
+    <RadioGroup
+        android:id="@+id/jenis_kelamin"
+        android:layout_below="@id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/laki_laki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"/>
+        <RadioButton
+            android:id="@+id/perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/jurusan"
+        android:layout_below="@id/jenis_kelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="#eeeeee"
+        android:entries="@array/jurusan"
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jurusan"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="#eeeeee"
+        android:layout_marginTop="10dp"
+        android:hint="Alamat"/>
+
+    <LinearLayout
+        android:id="@+id/action"
+        android:layout_below="@id/alamat"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:onClick="AddMahasiswa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="#1A293E"
+            android:text="Add"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/mahasiswa_list"
+        android:layout_below="@id/action"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="2dp"
+        android:padding="2dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jurusan">
+        <item>Teknologi Informasi dan Komputer</item>
+        <item>Sistem Informasi</item>
+        <item>Manajeman Informatika Bisnis dan Multimedia</item>
+        <item>Desain Komunikasi Visual</item>
+        <item>Pertelevisian dan Film</item>
+        <item>Desain Interior</item>
+        <item>Perhotelan</item>
+        <item>Sekretaris</item>
+        <item>Public Relation</item>
+    </string-array>
+</resources>
